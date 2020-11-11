@@ -1,0 +1,3 @@
+APIKEY = ''
+SECRET_APIKEY = ''
+BEARER_TOKEN = ''
