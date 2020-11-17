@@ -6,16 +6,14 @@ authors = ["Your Name <you@example.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "3.8"
+python = ">=3.7"
 networkx = "^2.5"
 numpy = "^1.19.4"
 pandas = "^1.1.4"
-plotly = "^4.12.0"
 tweepy = "^3.9.0"
 pyecharts = "*"
 nbformat = "^5.0.8"
 jupyter = "^1.0.0"
-matplotlib = "^3.3.2"
 ipython = "^7.19.0"
 jupyter-echarts-pypkg = "^0.1.5"
 jupyterlab = "^2.2.9"
