@@ -22,7 +22,7 @@ After that the jupyter lab interface should start and you can open twitterSNA.ip
 
 ### View the notebook as html 
 
-Just open the twitterSNA.html file in your browswe
+Just open the twitterSNA.html file in your browser.
 
 ### What if the visualisation doesn't show correctly
 
