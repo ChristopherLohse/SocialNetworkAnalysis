@@ -4,6 +4,10 @@
 
 This is a project about Tobi's Twitter Network. The question we asked ourselves is: "Which people (accounts) are influencing Tobis Feed the most?". To answer this question we are using methods of the Social Network Analysis. Our first approach is to collect all friends (people which Tobi is following) and check which of his friends has overlapping friends. The second approach is to just create a network with all friends and friends of friends (2nd-grade friends) from Tobi and calculate the centrality betweenness of each node.
 
+## Simple Access 
+
+just go to http://dev.christopherlohse.de/ and you can enjoy the jupyter notebook of the Documentation as .html file.
+
 ## Installation steps
 
 ### Prerequisites
@@ -26,7 +30,7 @@ After that the jupyter lab interface should start and you can open twitterSNA.ip
 
 ### View the notebook as html 
 
-Just open the twitterSNA.html file in the HTML folder in your browser.
+Just open the twitterSNA.html file in the HTML folder in your browser or go to http://dev.christopherlohse.de/ as described above.
 
 ### What if the visualisation doesn't show correctly
 
