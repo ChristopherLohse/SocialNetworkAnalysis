@@ -24,10 +24,10 @@ After that the jupyter lab interface should start and you can open twitterSNA.ip
 
 ### View the notebook as html 
 
-Just open the twitterSNA.html file in your browser.
+Just open the twitterSNA.html file in the HTML folder in your browser.
 
 ### What if the visualisation doesn't show correctly
 
-Open visualisation.html. It is also necessary to zoom in the visualisation in order to see all details correctly.
+Open visualisation.html in The HTML colder. It is also necessary to zoom in the visualisation in order to see all details correctly.
 
 
