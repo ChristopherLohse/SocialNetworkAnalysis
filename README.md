@@ -6,7 +6,7 @@ This is a project about Tobi's Twitter Network. The question we asked ourselves 
 
 ## Simple Access 
 
-just go to http://dev.christopherlohse.de/ and you can enjoy the jupyter notebook of the Documentation as .html file.
+just go to http://dev.christopherlohse.de/SocialNetworkAnalysis/ and you can enjoy the jupyter notebook of the Documentation as .html file.
 
 ## Installation steps
 
@@ -30,7 +30,7 @@ After that the jupyter lab interface should start and you can open twitterSNA.ip
 
 ### View the notebook as html 
 
-Just open the twitterSNA.html file in the HTML folder in your browser or go to http://dev.christopherlohse.de/ as described above.
+Just open the twitterSNA.html file in the HTML folder in your browser or go to http://dev.christopherlohse.de/SocialNetworkAnalysis/ as described above.
 
 ### What if the visualisation doesn't show correctly
 
