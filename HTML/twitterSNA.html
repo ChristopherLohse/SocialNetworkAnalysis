@@ -14259,19 +14259,19 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Tobis-Twitter-Network">Tobis Twitter Network<a class="anchor-link" href="#Tobis-Twitter-Network">&#182;</a></h1><p>This is a project about Tobis Twitter Network. The question we asked ourself is: "Which people (accounts) are influencing Tobis Feed the most?". To answer the question we are using methods from the Social Network Analysis. Our first approach is to collect all friends (people which Tobi is following) and check which of his friends has overlapping friends. The second approach is to just create a network with all friends and friends of friends (2nd grade friends) from Tobi and calculate the centrallity betweenness of each node.</p>
+<h1 id="Tobi's-Twitter-Network">Tobi's Twitter Network<a class="anchor-link" href="#Tobi's-Twitter-Network">&#182;</a></h1><p>This is a project about Tobi's Twitter Network. The question we asked ourselves is: "Which people (accounts) are influencing Tobis Feed the most?". To answer this question we are using methods of the Social Network Analysis. Our first approach is to collect all friends (people which Tobi is following) and check which of his friends has overlapping friends. The second approach is to just create a network with all friends and friends of friends (2nd-grade friends) from Tobi and calculate the centrality betweenness of each node.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="1.-Crawling">1. Crawling<a class="anchor-link" href="#1.-Crawling">&#182;</a></h2><p>To crawling twitter we are using the <a href="https://www.tweepy.org/">tweepy library</a>. To use this library it is necessary to get an API-key from <a href="https://developer.twitter.com/en">Twitter Developer</a>. Our API-keys is stored in <code>config.py</code>, there is a template in the repository.</p>
+<h2 id="1.-Crawling">1. Crawling<a class="anchor-link" href="#1.-Crawling">&#182;</a></h2><p>To crawling Twitter we are using the <a href="https://www.tweepy.org/">tweepy library</a>. To use this library it is necessary to get an API-key from <a href="https://developer.twitter.com/en">Twitter Developer</a>. Our API-keys is stored in <code>config.py</code>. A template is included in the repository.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">string</span> <span class="c1"># for printable comparison</span>
@@ -14289,13 +14289,13 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>First we must authenticate us with our API-keys:</p>
+<p>First, we must authenticate us with our API-keys:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Authenticate Tweepy, a Python Library for crawling Twitter via the Twitter API</span>
@@ -14320,7 +14320,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Get my ID</span>
@@ -14343,7 +14343,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[32]:</div>
 
 
 
@@ -14361,13 +14361,13 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Wow! An ID! How awesome! Now we crawl Tobis friends, their IDs and Names:</p>
+<p>Wow! An ID! How awesome! Now we crawl Tobi's friends, their IDs and Names:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Get my follows (friends)</span>
@@ -14397,7 +14397,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[33]:</div>
 
 
 
@@ -14415,13 +14415,13 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>After getting a list with the IDs from Tobis friends, we can go deeper! We crawl all friends of friends from Tobi and store them in a dict. This may take some time since Twitter's API doesn't allow bigger API-calls like this, so there is at least one 15 min timeout after getting a RateLimitError. Take a cup of tea or do some sport while this executes.</p>
+<p>After getting a list with the IDs of Tobi's friends, we can go deeper! We crawl all friends of friends from Tobi and store them in a "dict". This may take some time since Twitter's API doesn't allow bigger API-calls like this, so there is at least one 15 min timeout after getting a RateLimitError. Take a cup of tea or do some sport while this executes.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Get 2. Grade Follows (Friends)</span>
@@ -14465,11 +14465,11 @@ a.anchor-link {
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Start crawling 40 Friends...
 Crawled already 14!
-Current Time: 14:06:09
-Sleep for 15 Minutes (until 14:21:10) to avoid RateLimitErrors. 
+Current Time: 14:20:08
+Sleep for 15 Minutes (until 14:35:09) to avoid RateLimitErrors. 
 Crawled already 29!
-Current Time: 14:21:48
-Sleep for 15 Minutes (until 14:36:49) to avoid RateLimitErrors. 
+Current Time: 14:35:27
+Sleep for 15 Minutes (until 14:50:28) to avoid RateLimitErrors. 
 </pre>
 </div>
 </div>
@@ -14481,7 +14481,7 @@ Sleep for 15 Minutes (until 14:36:49) to avoid RateLimitErrors.
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Transforming-data">Transforming data<a class="anchor-link" href="#Transforming-data">&#182;</a></h2><p>After waiting for twitter to hand over the data we are now able to create an edge list and a node list. The first approach is counting all overlapping friends of Tobis friends. E.g. Tobi has three friends: Ole, Christopher and Philipp. Ole and Christopher are both following (befriended with) Barack Obama and Elon Musk. So there would be an edge <code>Ole &lt;--2--&gt; Christopher</code>. Ole and Philipp are both following Michael Reeves, Alexandria Ocasio-Cortez and Greta Thunberg. This edge would be <code>Ole &lt;--3--&gt; Philipp</code>. All edges are after the counting saved to a file called <code>my-edgy-friends.edges</code> and all nodes are saved to <code>my-nody-friends.nodes</code>:</p>
+<h2 id="Transforming-data">Transforming data<a class="anchor-link" href="#Transforming-data">&#182;</a></h2><p>After waiting for Twitter to hand over the data we are now able to create an edge list and a node list. The first approach is counting all overlapping friends of Tobi's friends. E.g. Tobi has three friends: Ole, Christopher and Philipp. Ole and Christopher are both following (befriended with) Barack Obama and Elon Musk. So there would be an edge <code>Ole &lt;--2--&gt; Christopher</code>. Ole and Philipp are both following Michael Reeves, Alexandria Ocasio-Cortez and Greta Thunberg. This edge would be <code>Ole &lt;--3--&gt; Philipp</code>. All edges are after the counting saved to a file called <code>my-edgy-friends.edges</code> and all nodes are saved to <code>my-nody-friends.nodes</code>:</p>
 
 </div>
 </div>
@@ -14503,7 +14503,7 @@ Sleep for 15 Minutes (until 14:36:49) to avoid RateLimitErrors.
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Reform data to fit into an edge list</span>
@@ -14555,7 +14555,7 @@ Sleep for 15 Minutes (until 14:36:49) to avoid RateLimitErrors.
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Get Names from friends</span>
@@ -14577,14 +14577,14 @@ Sleep for 15 Minutes (until 14:36:49) to avoid RateLimitErrors.
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h2 id="2.-Social-Network-Analysis">2. Social Network Analysis<a class="anchor-link" href="#2.-Social-Network-Analysis">&#182;</a></h2><p>This part can be executed without the 1. part!
-We are now able to read the data from the edge- and node files and put them in a dataframe:</p>
+<h2 id="2.-Social-Network-Analysis">2. Social Network Analysis<a class="anchor-link" href="#2.-Social-Network-Analysis">&#182;</a></h2><p>This part is executable without the 1. part!
+We are now able to read the data from the edge- and node files and put them in a  pandas dataFrame:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1"># for analysing and changing data</span>
@@ -14602,7 +14602,7 @@ We are now able to read the data from the edge- and node files and put them in a
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Reading Data into pandas DataFrame adjusting columns</span>
@@ -14624,7 +14624,7 @@ We are now able to read the data from the edge- and node files and put them in a
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[38]:</div>
 
 
 
@@ -14679,10 +14679,10 @@ We are now able to read the data from the edge- and node files and put them in a
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="sa">f</span><span class="s1">&#39;The Datframe has the dimension </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1"> rows and </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1"> columns&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sa">f</span><span class="s1">&#39;The DataFrame has the dimension </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1"> rows and </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1"> columns&#39;</span>
 </pre></div>
 
      </div>
@@ -14698,13 +14698,13 @@ We are now able to read the data from the edge- and node files and put them in a
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&#39;The Datframe has the dimension 433 rows and 3 columns&#39;</pre>
+<pre>&#39;The DataFrame has the dimension 433 rows and 3 columns&#39;</pre>
 </div>
 
 </div>
@@ -14716,13 +14716,13 @@ We are now able to read the data from the edge- and node files and put them in a
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Create-the-Network">Create the Network<a class="anchor-link" href="#Create-the-Network">&#182;</a></h2><p>We can now extract these edges (rows) from our dataframe with the help of this function:</p>
+<h2 id="Create-the-Network">Create the Network<a class="anchor-link" href="#Create-the-Network">&#182;</a></h2><p>We can now extract these edges (rows) from our dataFrame with the help of this function:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">create_edgelist</span><span class="p">(</span><span class="n">df</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">)]:</span>
@@ -14748,7 +14748,7 @@ We are now able to read the data from the edge- and node files and put them in a
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">edgelist</span> <span class="o">=</span> <span class="n">create_edgelist</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
@@ -14762,13 +14762,13 @@ We are now able to read the data from the edge- and node files and put them in a
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Initiate-the-Network-Graph">Initiate the Network Graph<a class="anchor-link" href="#Initiate-the-Network-Graph">&#182;</a></h2><p>The edges from the edgelist can now be added to a new nx.Graph object. The nx.Graph extracts all Nodes automaticly from the edges:</p>
+<h2 id="Initiate-the-Network-Graph">Initiate the Network Graph<a class="anchor-link" href="#Initiate-the-Network-Graph">&#182;</a></h2><p>The edges from the edgelist can now be added to a new nx.Graph object. The nx.Graph extracts all Nodes automatically from the edges:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
@@ -14789,7 +14789,7 @@ We are now able to read the data from the edge- and node files and put them in a
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[42]:</div>
 
 
 
@@ -14813,13 +14813,13 @@ We are now able to read the data from the edge- and node files and put them in a
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>With the help of nx it is now possible to calculate the <code>degree_centrality</code> for all nodes in our nx.Graph. We want to calculate the degree degree_centrality, because we want to find out who has the most contacts shared with Tobi.</p>
+<p>With the help of the nx library, it is now possible to calculate the <code>degree_centrality</code> for all nodes in our nx.Graph object. We want to calculate the degree degree_centrality because we want to find out who has the most contacts shared with Tobi.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Calculating degree_centrality which returns an object with the value for each node:</span>
@@ -14843,7 +14843,7 @@ We are now able to read the data from the edge- and node files and put them in a
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[43]:</div>
 
 
 
@@ -14861,13 +14861,13 @@ We are now able to read the data from the edge- and node files and put them in a
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Visualize-the-Network-Graph">Visualize the Network Graph<a class="anchor-link" href="#Visualize-the-Network-Graph">&#182;</a></h2><p>Now we can visualize the Network Graph. To do this we create two helper functions to configure appearence of the nodes and the edges.</p>
+<h2 id="Visualize-the-Network-Graph">Visualize the Network Graph<a class="anchor-link" href="#Visualize-the-Network-Graph">&#182;</a></h2><p>Now we can visualize the Network Graph. In order to achieve this, we create two helper functions to configure the appearance of the nodes and the edges.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">configure_nodes_visualisation</span><span class="p">(</span><span class="n">G</span> <span class="p">:</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">)</span><span class="o">-&gt;</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
@@ -14923,7 +14923,7 @@ We are now able to read the data from the edge- and node files and put them in a
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">configure_edges_visualisation</span><span class="p">(</span><span class="n">G</span><span class="p">:</span><span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">)</span><span class="o">-&gt;</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
@@ -14953,7 +14953,7 @@ We are now able to read the data from the edge- and node files and put them in a
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">nodes</span> <span class="o">=</span> <span class="n">configure_nodes_visualisation</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
@@ -14973,7 +14973,7 @@ We are now able to read the data from the edge- and node files and put them in a
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[46]:</div>
 
 
 
@@ -15006,7 +15006,7 @@ We are now able to read the data from the edge- and node files and put them in a
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">links</span> <span class="o">=</span> <span class="n">configure_edges_visualisation</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
@@ -15026,7 +15026,7 @@ We are now able to read the data from the edge- and node files and put them in a
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[47]:</div>
 
 
 
@@ -15053,7 +15053,7 @@ We are now able to read the data from the edge- and node files and put them in a
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[58]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a figure object and add nodes and edges (called links) into the figure format layout, set labels for tooltip</span>
@@ -15063,7 +15063,7 @@ We are now able to read the data from the edge- and node files and put them in a
     <span class="n">nodes</span><span class="p">,</span>
     <span class="n">links</span><span class="p">,</span>
     <span class="n">tooltip_opts</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{a}</span><span class="s2"> &lt;br&gt; </span><span class="si">{b}</span><span class="s2"> : </span><span class="si">{c}</span><span class="s2">&quot;</span><span class="p">,</span>
-    <span class="n">repulsion</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+    <span class="n">repulsion</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">gravity</span><span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
     <span class="n">linestyle_opts</span> <span class="o">=</span> <span class="n">opts</span><span class="o">.</span><span class="n">LineStyleOpts</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">curve</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;source&quot;</span><span class="p">)</span>
 <span class="p">)</span>
@@ -15085,7 +15085,7 @@ We are now able to read the data from the edge- and node files and put them in a
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[58]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[48]:</div>
 
 
 
@@ -15099,13 +15099,13 @@ We are now able to read the data from the edge- and node files and put them in a
     });
 </script>
 
-        <div id="a6be643f61eb4cf3b1baa44837b96dca" style="width:900px; height:900px;"></div>
+        <div id="ff5aa81d3ab8499a8358234f1637d974" style="width:900px; height:900px;"></div>
 
 <script>
         require(['echarts'], function(echarts) {
-                var chart_a6be643f61eb4cf3b1baa44837b96dca = echarts.init(
-                    document.getElementById('a6be643f61eb4cf3b1baa44837b96dca'), 'white', {renderer: 'canvas'});
-                var option_a6be643f61eb4cf3b1baa44837b96dca = {
+                var chart_ff5aa81d3ab8499a8358234f1637d974 = echarts.init(
+                    document.getElementById('ff5aa81d3ab8499a8358234f1637d974'), 'white', {renderer: 'canvas'});
+                var option_ff5aa81d3ab8499a8358234f1637d974 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -15150,7 +15150,7 @@ We are now able to read the data from the edge- and node files and put them in a
                 "rotateLabel": false
             },
             "force": {
-                "repulsion": 30,
+                "repulsion": 1,
                 "edgeLength": 50,
                 "gravity": 0.5
             },
@@ -15879,7 +15879,7 @@ We are now able to read the data from the edge- and node files and put them in a
                 {
                     "source": "Berlin4Future #BidenForParis",
                     "target": "Volksverpetzer",
-                    "value": 45
+                    "value": 46
                 },
                 {
                     "source": "Berlin4Future #BidenForParis",
@@ -15909,7 +15909,7 @@ We are now able to read the data from the edge- and node files and put them in a
                 {
                     "source": "Berlin4Future #BidenForParis",
                     "target": "extra3",
-                    "value": 60
+                    "value": 61
                 },
                 {
                     "source": "Berlin4Future #BidenForParis",
@@ -15994,7 +15994,7 @@ We are now able to read the data from the edge- and node files and put them in a
                 {
                     "source": "Marie von den Benken",
                     "target": "Fabian Kster",
-                    "value": 19
+                    "value": 20
                 },
                 {
                     "source": "Marie von den Benken",
@@ -16059,7 +16059,7 @@ We are now able to read the data from the edge- and node files and put them in a
                 {
                     "source": "Mai Thi Nguyen-Kim",
                     "target": "Luisa Neubauer",
-                    "value": 114
+                    "value": 115
                 },
                 {
                     "source": "Mai Thi Nguyen-Kim",
@@ -16099,7 +16099,7 @@ We are now able to read the data from the edge- and node files and put them in a
                 {
                     "source": "Mai Thi Nguyen-Kim",
                     "target": "Fabian Kster",
-                    "value": 69
+                    "value": 70
                 },
                 {
                     "source": "Mai Thi Nguyen-Kim",
@@ -16739,7 +16739,7 @@ We are now able to read the data from the edge- and node files and put them in a
                 {
                     "source": "Luisa Neubauer",
                     "target": "Karl Lauterbach",
-                    "value": 87
+                    "value": 88
                 },
                 {
                     "source": "Luisa Neubauer",
@@ -16759,7 +16759,7 @@ We are now able to read the data from the edge- and node files and put them in a
                 {
                     "source": "Luisa Neubauer",
                     "target": "Fabian Kster",
-                    "value": 100
+                    "value": 101
                 },
                 {
                     "source": "Luisa Neubauer",
@@ -16814,7 +16814,7 @@ We are now able to read the data from the edge- and node files and put them in a
                 {
                     "source": "Luisa Neubauer",
                     "target": "extra3",
-                    "value": 292
+                    "value": 293
                 },
                 {
                     "source": "Luisa Neubauer",
@@ -16864,7 +16864,7 @@ We are now able to read the data from the edge- and node files and put them in a
                 {
                     "source": "DevelopersForFuture  #WeVsClimateCrisis",
                     "target": "Fabian Kster",
-                    "value": 25
+                    "value": 26
                 },
                 {
                     "source": "DevelopersForFuture  #WeVsClimateCrisis",
@@ -16964,7 +16964,7 @@ We are now able to read the data from the edge- and node files and put them in a
                 {
                     "source": "Rezo",
                     "target": "Fabian Kster",
-                    "value": 47
+                    "value": 48
                 },
                 {
                     "source": "Rezo",
@@ -17054,7 +17054,7 @@ We are now able to read the data from the edge- and node files and put them in a
                 {
                     "source": "Ende Gelnde",
                     "target": "Fridays For Future Germany",
-                    "value": 214
+                    "value": 215
                 },
                 {
                     "source": "Ende Gelnde",
@@ -17129,7 +17129,7 @@ We are now able to read the data from the edge- and node files and put them in a
                 {
                     "source": "Karl Lauterbach",
                     "target": "Fabian Kster",
-                    "value": 44
+                    "value": 45
                 },
                 {
                     "source": "Karl Lauterbach",
@@ -17209,7 +17209,7 @@ We are now able to read the data from the edge- and node files and put them in a
                 {
                     "source": "Fridays For Future Germany",
                     "target": "Fabian Kster",
-                    "value": 51
+                    "value": 52
                 },
                 {
                     "source": "Fridays For Future Germany",
@@ -17319,7 +17319,7 @@ We are now able to read the data from the edge- and node files and put them in a
                 {
                     "source": "Nico Semsrott",
                     "target": "Fabian Kster",
-                    "value": 39
+                    "value": 40
                 },
                 {
                     "source": "Nico Semsrott",
@@ -17394,7 +17394,7 @@ We are now able to read the data from the edge- and node files and put them in a
                 {
                     "source": "Fabian Kster",
                     "target": "Volksverpetzer",
-                    "value": 73
+                    "value": 74
                 },
                 {
                     "source": "Fabian Kster",
@@ -17409,7 +17409,7 @@ We are now able to read the data from the edge- and node files and put them in a
                 {
                     "source": "Fabian Kster",
                     "target": "teresa bcker",
-                    "value": 49
+                    "value": 50
                 },
                 {
                     "source": "Fabian Kster",
@@ -17424,12 +17424,12 @@ We are now able to read the data from the edge- and node files and put them in a
                 {
                     "source": "Fabian Kster",
                     "target": "Der Postillon",
-                    "value": 35
+                    "value": 36
                 },
                 {
                     "source": "Fabian Kster",
                     "target": "extra3",
-                    "value": 151
+                    "value": 152
                 },
                 {
                     "source": "Fabian Kster",
@@ -17529,7 +17529,7 @@ We are now able to read the data from the edge- and node files and put them in a
                 {
                     "source": "Volksverpetzer",
                     "target": "extra3",
-                    "value": 235
+                    "value": 236
                 },
                 {
                     "source": "Volksverpetzer",
@@ -17894,7 +17894,7 @@ We are now able to read the data from the edge- and node files and put them in a
         "padding": 5
     }
 };
-                chart_a6be643f61eb4cf3b1baa44837b96dca.setOption(option_a6be643f61eb4cf3b1baa44837b96dca);
+                chart_ff5aa81d3ab8499a8358234f1637d974.setOption(option_ff5aa81d3ab8499a8358234f1637d974);
         });
     </script>
 
@@ -17909,15 +17909,15 @@ We are now able to read the data from the edge- and node files and put them in a
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Analysis">Analysis<a class="anchor-link" href="#Analysis">&#182;</a></h2><p>But what can the Visualization tell us? Each link represents overlapping friends between two friends of Tobi. Therefore each link represents the homogenety of the interests of those two friends. So, the centrallity_degree of a node says how homogeneous the interests of the friend are compared to the rest of Tobis friends. Therefore this Network shows us which accounts from Tobis Twitter friendslist have the most homogeneous interests compared to Tobi. So that can tell us which friend shares the relative most content which Tobi agrees on, but not which friend influences Tobi the most.</p>
+<h2 id="Analysis">Analysis<a class="anchor-link" href="#Analysis">&#182;</a></h2><p>But what can the Visualization tell us? Each link represents overlapping friends between two friends of Tobi. Therefore each link represents the homogeneity of the interests of those two friends. So, the centrallity_degree of a node says how homogeneous the interests of the friend are compared to the rest of Tobi's friends. Therefore this Network shows us which accounts from Tobis Twitter friendslist have the most homogeneous interests compared to Tobi. So that can tell us which friend shares the relative most content which Tobi agrees on, but not which friend influences Tobi the most.</p>
 <hr>
-<h2 id="3.-Alternative-Approach">3. Alternative Approach<a class="anchor-link" href="#3.-Alternative-Approach">&#182;</a></h2><p>To answer the question which friend of Tobi influences his Twitter Feed the most we must try another approach. This approach is to use a simple directed network. So here each edge represents a directed relationship between a 1st grade friend of Tobi and a 2nd grade friend of Tobi. E.g. Tobi has two friends (follows two accounts): Günni and Peter. Günni has two more friends, Sarah and Eli. Peter has also a friend: Erik. So there would be the edges: <code>Günni --&gt; Sarah</code>, <code>Günni --&gt; Eli</code> and <code>Peter --&gt; Erik</code>. The edge list is saved to the file <code>my-edgy-friend-network.edges</code> but with just the account IDs since it would take to long to crawl Twitter to get the clear names of 20 000 people:</p>
+<h2 id="3.-Alternative-Approach">3. Alternative Approach<a class="anchor-link" href="#3.-Alternative-Approach">&#182;</a></h2><p>To answer the question which friend of Tobi influences his Twitter Feed the most we must try another approach. This approach is to use a simple directed network. So here each edge represents a directed relationship between a 1st-grade friend of Tobi and a 2nd-grade friend of Tobi. E.g. Tobi has two friends (follows two accounts): Günni and Peter. Günni has two more friends, Sarah and Eli. Peter has also a friend: Erik. So there would be the edges: <code>Günni --&gt; Sarah</code>, <code>Günni --&gt; Eli</code> and <code>Peter --&gt; Erik</code>. The edge list is saved to the file <code>my-edgy-friend-network.edges</code> but with just the account IDs since it would take to long to crawl Twitter to get the clear names of 20 000 people:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;my-edgy-friend-network.edges&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
@@ -17939,13 +17939,13 @@ We are now able to read the data from the edge- and node files and put them in a
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><em>This can be executed with the saved edge-files from the repository without running the above code.</em></p>
-<p>Then we can import this data into a dataframe, create an edgelist, provide it to nx to create a nx.Graph obejct and calculate the centrality for each node:</p>
+<p>Then we can import this data into a dataFrame, create an edgelist, give it into the networkx library to create a nx.Graph object and calculate the centrality for each node:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_alt</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;my-edgy-friend-network.edges&quot;</span><span class="p">,</span> <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;node1&quot;</span><span class="p">,</span> <span class="s2">&quot;node2&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">])</span>
@@ -17961,7 +17961,7 @@ We are now able to read the data from the edge- and node files and put them in a
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">edgelist_alt</span> <span class="o">=</span> <span class="n">create_edgelist</span><span class="p">(</span><span class="n">df_alt</span><span class="p">)</span>
@@ -17975,7 +17975,7 @@ We are now able to read the data from the edge- and node files and put them in a
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">G_alt</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
@@ -17990,19 +17990,19 @@ We are now able to read the data from the edge- and node files and put them in a
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The second network is a <code>directed</code> singlemode network this time, which is <code>not weightet</code>.</p>
+<p>The second network is a <code>directed</code> Singlemode network this time, which is <code>not weighted</code>.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Since we want to find out who influences Tobi the most we want to find who knows the most influencial people in Tobis network. This means we want to find out who has the most influential friends in the second degree friend network. To achieve this we calculate again the <code>betweeness degreee scores</code> for all persons in Tobis network.</p>
+<p>Since we want to find out who influences Tobi the most we want to find who knows the most influential people in Tobi's network. This means we want to find out who has the most influential friends in the second-degree friend network. To achieve this we calculate again the <code>betweenness degree scores</code> for all persons in Tobi's network.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">centrality_alt</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">degree_centrality</span><span class="p">(</span><span class="n">G_alt</span><span class="p">)</span>
@@ -18016,13 +18016,13 @@ We are now able to read the data from the edge- and node files and put them in a
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Now we can take the Top 20 Nodes and crawl Twitter for the clear names:</p>
+<p>Now we have the Top 20 Nodes and can crawl Twitter to get the clear names:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">centrality_alt_top20_ids</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">centrality_alt</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">centrality_alt</span><span class="o">.</span><span class="n">get</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)[:</span><span class="mi">20</span><span class="p">]</span>
@@ -18048,7 +18048,7 @@ We are now able to read the data from the edge- and node files and put them in a
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[50]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[54]:</div>
 
 
 
@@ -18085,7 +18085,7 @@ We are now able to read the data from the edge- and node files and put them in a
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>So these are the 20 accounts which influence Tobis Twitter feed the most.</p>
+<p>So these are the 20 accounts which influence Tobi's Twitter contacts the most.</p>
 
 </div>
 </div>
