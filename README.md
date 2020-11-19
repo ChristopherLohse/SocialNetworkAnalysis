@@ -20,6 +20,8 @@ jupyter lab
 
 After that the jupyter lab interface should start and you can open twitterSNA.ipynb to view the notebook
 
+## Error Handling and backups
+
 ### View the notebook as html 
 
 Just open the twitterSNA.html file in your browser.
