@@ -17945,6 +17945,13 @@ We are now able to read the data from the edge- and node files and put them in a
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>To see the grafic in big click
+<a href="HTML/1stVisualisation.html">here</a></p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Analysis">Analysis<a class="anchor-link" href="#Analysis">&#182;</a></h2><p>But what can the Visualization tell us? Each link represents overlapping friends between two friends of Tobi. Therefore each link represents the homogeneity of the interests of those two friends. So, the centrallity_degree of a node says how homogeneous the interests of the friend are compared to the rest of Tobi's friends. Therefore this Network shows us which accounts from Tobis Twitter friendslist have the most homogeneous interests compared to Tobi. So that can tell us which friend shares the relative most content which Tobi agrees on, but not which friend influences Tobi the most.</p>
 <hr>
 <h2 id="3.-Alternative-Approach">3. Alternative Approach<a class="anchor-link" href="#3.-Alternative-Approach">&#182;</a></h2><p>To answer the question which friend of Tobi influences his Twitter Feed the most we must try another approach. This approach is to use a simple directed network. So here each edge represents a directed relationship between a 1st-grade friend of Tobi and a 2nd-grade friend of Tobi. E.g. Tobi has two friends (follows two accounts): Günni and Peter. Günni has two more friends, Sarah and Eli. Peter has also a friend: Erik. So there would be the edges: <code>Günni --&gt; Sarah</code>, <code>Günni --&gt; Eli</code> and <code>Peter --&gt; Erik</code>. The edge list is saved to the file <code>my-edgy-friend-network.edges</code> but with just the account IDs since it would take to long to crawl Twitter to get the clear names of 20 000 people:</p>
@@ -21118,6 +21125,13 @@ Since we want to find out who influences Tobi the most we want to find who knows
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>To see the grafic in big click
+<a href="HTML/2ndVisualisation.html">here</a></p>
+
+</div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
