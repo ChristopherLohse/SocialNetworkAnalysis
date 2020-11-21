@@ -6,7 +6,8 @@ This is a project about Tobi's Twitter Network. The question we asked ourselves 
 
 ## Simple Access 
 
-just go to http://dev.christopherlohse.de/SocialNetworkAnalysis/ and you can enjoy the jupyter notebook of the Documentation as .html file.
+just go to To see the graphic in big click
+[here](http://dev.christopherlohse.de/SocialNetworkAnalysis/) and you can enjoy the jupyter notebook of the Documentation as .html file.
 
 ## Installation steps
 
@@ -24,16 +25,18 @@ pip install requirements.txt
 jupyter lab
 ```
 
-After that the jupyter lab interface should start and you can open twitterSNA.ipynb to view the notebook
+After that, the jupyter lab interface should start and you can open twitterSNA.ipynb to view the notebook
 
 ## Error Handling and Backups
 
-### View the notebook as html 
+### View the notebook as HTML 
 
 Just open the twitterSNA.html file in the HTML folder in your browser or go to http://dev.christopherlohse.de/SocialNetworkAnalysis/ as described above.
 
 ### What if the visualisation doesn't show correctly
 
-Open visualisation.html in The HTML colder. It is also necessary to zoom in the visualisation in order to see all details correctly.
+Open 1stVisualisation.html and 2ndVisualisation.html in The HTML folder or click
+[here](http://dev.christopherlohse.de/SocialNetworkAnalysis/HTML/1stVisualisation.html) or 
+[here](http://dev.christopherlohse.de/SocialNetworkAnalysis/HTML/2ndVisualisation.html) to view the graphic in big. It is also recommended to zoom in the visualisation in order to see all details correctly.
 
 
