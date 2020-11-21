@@ -34,7 +34,7 @@ After that, the jupyter lab interface should start and you can open twitterSNA.i
 
 ### View the notebook as HTML 
 
-Just open the twitterSNA.html file in the HTML folder in your browser or go to http://dev.christopherlohse.de/SocialNetworkAnalysis/ as described above.
+Just open the index.html file included in the repository in your browser or go to http://dev.christopherlohse.de/SocialNetworkAnalysis/ as described above.
 
 ### What if the visualisation doesn't show correctly
 
