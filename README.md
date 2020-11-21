@@ -9,8 +9,7 @@ To get the Documentation as PDF just click [here](http://dev.christopherlohse.de
 
 ## Simple Access 
 
-just go to To see the graphic in big click
-[here](http://dev.christopherlohse.de/SocialNetworkAnalysis/) and you can enjoy the jupyter notebook of the Documentation as .html file.
+Just click [here](http://dev.christopherlohse.de/SocialNetworkAnalysis/) and you can enjoy the jupyter notebook of the Documentation as .html file.
 
 ## Installation steps
 
