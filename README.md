@@ -9,8 +9,7 @@ To get the Documentation as PDF just click [here](http://dev.christopherlohse.de
 
 ## Simple Access 
 
-just go to To see the graphic in big click
-[here](http://dev.christopherlohse.de/SocialNetworkAnalysis/) and you can enjoy the jupyter notebook of the Documentation as .html file.
+Just click [here](http://dev.christopherlohse.de/SocialNetworkAnalysis/) and you can enjoy the jupyter notebook of the Documentation as .html file.
 
 ## Installation steps
 
@@ -24,11 +23,17 @@ just go to To see the graphic in big click
 Type in the terminal in the repository folder:
 
 ``` bash
-pip install requirements.txt
-jupyter lab
+pip install -r requirements.txt
+jupyter notebook
 ```
-
 After that, the jupyter lab interface should start and you can open twitterSNA.ipynb to view the notebook
+If this dosn't work try to install jupyter notebook with:
+``` bash
+pip install jupyter notebook
+jupyter notebook
+```
+After that try to open the twitterSNA.ipynb File in the jupyter interface and comment out the first line.
+
 
 ## Error Handling and Backups
 
