@@ -23,7 +23,7 @@ Just click [here](http://dev.christopherlohse.de/SocialNetworkAnalysis/) and you
 Type in the terminal in the repository folder:
 
 ``` bash
-pip install requirements.txt
+pip install -r requirements.txt
 jupyter notebook
 ```
 
