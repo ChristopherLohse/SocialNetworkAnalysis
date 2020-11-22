@@ -26,8 +26,14 @@ Type in the terminal in the repository folder:
 pip install -r requirements.txt
 jupyter notebook
 ```
-
 After that, the jupyter lab interface should start and you can open twitterSNA.ipynb to view the notebook
+If this dosn't work try to install jupyter notebook with:
+``` bash
+pip install jupyter notebook
+jupyter notebook
+```
+After that try to open the twitterSNA.ipynb File in the jupyter interface and comment out the first line.
+
 
 ## Error Handling and Backups
 
